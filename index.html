@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Arab Emirates | Meridian Advisory | Management Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --gold: #c9a84c;
+      --gold-light: #e5c97a;
+      --cream: #f5f0e8;
+      --cream-dark: #ece6d8;
+      --white: #ffffff;
+      --text-dark: #1a1a2e;
+      --text-mid: #4a4a6a;
+      --text-light: #8888aa;
+      --border: rgba(201,168,76,0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── TOPBAR ────────────────────────────────────── */
+    .topbar {
+      background: var(--navy);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .topbar a { color: var(--gold); text-decoration: none; font-weight: 500; }
+
+    /* ── MAIN HEADER ───────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 2px 20px rgba(10,22,40,0.08);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .logo span { color: var(--gold); }
+
+    .main-nav {
+      display: flex;
+      gap: 0;
+      list-style: none;
+    }
+    .main-nav li { position: relative; }
+    .main-nav > li > a {
+      display: block;
+      padding: 0 18px;
+      height: 70px;
+      line-height: 70px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .main-nav > li > a:hover { color: var(--gold); }
+    .main-nav > li > a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0; left: 18px; right: 18px;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+    .main-nav > li > a:hover::after { transform: scaleX(1); }
+
+    .header-cta {
+      padding: 10px 24px;
+      background: var(--navy);
+      color: var(--gold) !important;
+      border: 1px solid var(--gold);
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: var(--navy);
+      overflow: hidden;
+      min-height: 440px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.12) 0%, transparent 60%),
+        linear-gradient(135deg, #0a1628 0%, #112240 50%, #0d1e3a 100%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 80px 40px 60px;
+    }
+    .hero-breadcrumb {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0.85;
+    }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.4); margin: 0 8px; }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 7vw, 96px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+    .hero-title em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-top: 16px;
+    }
+
+    /* ── ANCHOR NAV ────────────────────────────────── */
+    .anchor-nav {
+      background: var(--navy-mid);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      position: sticky;
+      top: 70px;
+      z-index: 999;
+    }
+    .anchor-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .anchor-nav a {
+      display: block;
+      padding: 16px 24px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .anchor-nav a:hover,
+    .anchor-nav a.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── SECTIONS ──────────────────────────────────── */
+    section { scroll-margin-top: 130px; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 32px;
+    }
+
+    /* ── OVERVIEW ─────────────────────────────── */
+    #overview {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .overview-text p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+    }
+    .overview-text p:first-of-type {
+      font-size: 18px;
+      color: var(--text-dark);
+      font-weight: 300;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 32px;
+      background: transparent;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .cta-btn:hover { background: var(--navy); color: var(--white); }
+    .cta-btn-gold {
+      background: var(--navy);
+      color: var(--gold);
+      border-color: var(--navy);
+    }
+    .cta-btn-gold:hover { background: var(--gold); color: var(--navy); }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 10px;
+    }
+    .stat-card {
+      background: var(--white);
+      padding: 32px 28px;
+      border-left: 3px solid var(--gold);
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+
+    /* ── SERVICES ──────────────────────────────────── */
+    #services {
+      padding: 100px 0;
+      background: var(--navy);
+    }
+    #services .section-title { color: var(--white); }
+    .services-intro {
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 60px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.12);
+      padding: 40px 32px;
+      transition: background 0.25s, border-color 0.25s;
+      cursor: pointer;
+    }
+    .service-card:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: rgba(201,168,76,0.35);
+    }
+    .service-icon {
+      width: 36px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .service-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+    }
+    .service-arrow {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── INSIGHTS ──────────────────────────────────── */
+    #insights {
+      padding: 100px 0;
+      background: var(--cream-dark);
+    }
+    .insights-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2px;
+    }
+    .insight-card {
+      background: var(--white);
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .insight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(10,22,40,0.12);
+    }
+    .insight-card-img {
+      height: 220px;
+      background: var(--navy-mid);
+      position: relative;
+      overflow: hidden;
+    }
+    .insight-card:nth-child(1) .insight-card-img {
+      height: 280px;
+    }
+    .insight-card-img-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .insight-card:nth-child(1) .insight-card-img-bg {
+      background: linear-gradient(135deg, #0a1628, #1a3355);
+    }
+    .insight-card:nth-child(2) .insight-card-img-bg {
+      background: linear-gradient(135deg, #1a2a45, #0d1e3a);
+    }
+    .insight-card:nth-child(3) .insight-card-img-bg {
+      background: linear-gradient(135deg, #12213d, #0a1628);
+    }
+    .insight-card-img-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .insight-type {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(10,22,40,0.7);
+      padding: 4px 10px;
+    }
+    .insight-body { padding: 28px; }
+    .insight-date {
+      font-size: 11px;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .insight-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .insight-card:nth-child(1) .insight-title { font-size: 26px; }
+    .insight-excerpt {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .insight-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    /* ── PEOPLE ──────────────────────────────────── */
+    #people {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .person-card {
+      background: var(--white);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .person-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(10,22,40,0.1);
+    }
+    .person-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--navy-mid);
+      position: relative;
+      overflow: hidden;
+    }
+    .person-photo-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .person-silhouette {
+      width: 70%;
+      height: 90%;
+      border-radius: 40% 40% 0 0;
+      opacity: 0.25;
+    }
+    .person-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(10,22,40,0.6) 100%);
+    }
+    .person-info { padding: 24px 20px; }
+    .person-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .person-title {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .person-regions {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .person-connect {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .person-connect:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* ── LOCATIONS ───────────────────────────────── */
+    #locations {
+      padding: 100px 0;
+      background: var(--navy);
+    }
+    #locations .section-title { color: var(--white); }
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 20px;
+    }
+    .location-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.12);
+      padding: 44px 36px;
+    }
+    .location-city {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .location-district {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .location-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 24px;
+    }
+    .location-address {
+      font-size: 14px;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.55);
+    }
+    .location-contact {
+      margin-top: 24px;
+      font-size: 13px;
+    }
+    .location-contact div { margin-bottom: 6px; }
+    .location-contact span {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-right: 8px;
+    }
+    .location-contact a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+    }
+    .location-map {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+    }
+
+    /* ── CAREERS CTA ───────────────────────────────── */
+    .careers-banner {
+      background: var(--gold);
+      padding: 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .careers-banner-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .careers-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .careers-text p {
+      font-size: 15px;
+      color: rgba(10,22,40,0.65);
+      margin-top: 8px;
+    }
+    .careers-link {
+      flex-shrink: 0;
+      padding: 16px 36px;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .careers-link:hover { background: #0a1628; }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      background: #06101f;
+      padding: 80px 40px 40px;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand .logo { color: var(--white); font-size: 26px; }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom a {
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* ── ANIMATIONS ─────────────────────────────────── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { opacity: 0; animation: fadeInUp 0.7s ease forwards; }
+    .fade-in-1 { animation-delay: 0.1s; }
+    .fade-in-2 { animation-delay: 0.25s; }
+    .fade-in-3 { animation-delay: 0.4s; }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+    @media (max-width: 900px) {
+      .header-inner { padding: 0 20px; }
+      .main-nav { display: none; }
+      .container { padding: 0 20px; }
+      .overview-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .insights-grid { grid-template-columns: 1fr; }
+      .people-grid { grid-template-columns: 1fr 1fr; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .careers-banner-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Global Locations &nbsp;/&nbsp; <a href="#">United Arab Emirates</a></span>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="#" class="logo">Meridian<span>&</span>Co</a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#services">Expertise</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#people">Our People</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#" class="header-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <p class="hero-breadcrumb fade-in fade-in-1">Global Locations <span>/</span> Middle East &amp; North Africa <span>/</span> United Arab Emirates</p>
+      <h1 class="hero-title fade-in fade-in-2">United<br /><em>Arab Emirates</em></h1>
+      <p class="hero-subtitle fade-in fade-in-3">Dubai &nbsp;·&nbsp; Abu Dhabi &nbsp;·&nbsp; Since 2008</p>
+    </div>
+  </section>
+
+  <!-- ANCHOR NAV -->
+  <nav class="anchor-nav" id="anchor-nav">
+    <div class="anchor-nav-inner">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#services">Services</a>
+      <a href="#insights">Insights</a>
+      <a href="#people">People</a>
+      <a href="#locations">Locations</a>
+    </div>
+  </nav>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p class="section-label">Overview</p>
+          <h2 class="section-title">High-impact outcomes through strategic advice and practical delivery.</h2>
+          <p>Meridian &amp; Co established a permanent presence in Dubai in 2008 and expanded to Abu Dhabi in 2017, serving the Middle East and North Africa region with world-class advisory services across finance, operations, and investigations.</p>
+          <p>Our team of experienced professionals brings a 360-degree approach to problem-solving, driving the critical change required to optimize performance and maximize value for organizations across the region.</p>
+          <p>Serving as trusted partners to executive boards and in interim management roles, our bias toward action and roll-up-your-sleeves culture ensures we deliver tangible results — rapidly and sustainably.</p>
+          <a href="#contact" class="cta-btn cta-btn-gold">Contact Our UAE Team</a>
+        </div>
+        <div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-number">17+</div>
+              <div class="stat-label">Years in the Region</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Professionals</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3</div>
+              <div class="stat-label">UAE Offices</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">40+</div>
+              <div class="stat-label">Industries Served</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS BANNER -->
+  <div class="careers-banner">
+    <div class="careers-banner-inner">
+      <div class="careers-text">
+        <h3>Build Your Career in the UAE</h3>
+        <p>We're looking for the best and the brightest who expect more and want to make a difference.</p>
+      </div>
+      <a href="#" class="careers-link">Search &amp; Apply →</a>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <p class="section-label">Our Expertise</p>
+      <h2 class="section-title">Capabilities That Drive Results</h2>
+      <p class="services-intro">From performance improvement to complex investigations, our UAE practice delivers integrated solutions powered by deep industry expertise and operational know-how.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Performance Improvement</div>
+          <div class="service-desc">We partner with companies to drive significant, sustainable business performance improvements across their operations by seizing the right growth opportunities.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Restructuring &amp; Turnaround</div>
+          <div class="service-desc">We collaborate with management and serve in interim roles to stabilize financial and operational performance by developing comprehensive profitability plans.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Transaction Advisory</div>
+          <div class="service-desc">Unrestricted by audit conflicts, we work with sovereign wealth funds, private equity firms, and corporates on M&amp;A and capital markets transactions across the region.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Tax Advisory</div>
+          <div class="service-desc">Comprehensive services including International Tax, M&amp;A Tax, Indirect Tax, Transfer Pricing, and UAE Corporate Tax tailored for the regional landscape.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Disputes &amp; Investigations</div>
+          <div class="service-desc">Trusted partners for business investigations, litigation consulting, accounting crises, forensic technology, and expert testimony across jurisdictions.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"></div>
+          <div class="service-name">Financial Services</div>
+          <div class="service-desc">Working with financial institutions to manage pressing challenges — advising on regulatory issues, capital management, risk, and business models.</div>
+          <a href="#" class="service-arrow">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights">
+    <div class="container">
+      <p class="section-label">Thought Leadership</p>
+      <h2 class="section-title">UAE &amp; MENA Insights</h2>
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-card-img">
+            <div class="insight-card-img-bg"></div>
+            <div class="insight-card-img-pattern"></div>
+            <span class="insight-type">Thought Leadership</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">May 12, 2026</div>
+            <h3 class="insight-title">From Disruption to Delivery: Concrete Actions for Immediate Crisis Response</h3>
+            <p class="insight-excerpt">Middle East industries are facing rising disruption across supply chains, operations, and liquidity. Our latest report outlines immediate actions to stabilize performance and build long-term resilience.</p>
+            <a href="#" class="insight-link">Read the Report</a>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-img">
+            <div class="insight-card-img-bg"></div>
+            <div class="insight-card-img-pattern"></div>
+            <span class="insight-type">Research</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">April 14, 2026</div>
+            <h3 class="insight-title">Digital Identity and Invoice Fraud Risks in UAE e-Invoicing</h3>
+            <p class="insight-excerpt">Key vulnerabilities in identity management and onboarding controls that could impact UAE businesses as Peppol-based e-invoicing rolls out.</p>
+            <a href="#" class="insight-link">Read More</a>
+          </div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-img">
+            <div class="insight-card-img-bg"></div>
+            <div class="insight-card-img-pattern"></div>
+            <span class="insight-type">Press Release</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">March 23, 2026</div>
+            <h3 class="insight-title">FY 2025 UAE Banking Pulse: Strong Credit Demand Amid Geopolitical Headwinds</h3>
+            <p class="insight-excerpt">The latest edition analyzes the FY 2025 performance of the UAE's ten largest listed banks, highlighting disciplined risk management and sustained business activity.</p>
+            <a href="#" class="insight-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="people">
+    <div class="container">
+      <p class="section-label">Our People</p>
+      <h2 class="section-title">Hands-On Leaders &amp; Problem Solvers</h2>
+      <div class="people-grid">
+        <!-- Person 1 -->
+        <div class="person-card">
+          <div class="person-photo">
+            <div class="person-photo-bg">
+              <svg class="person-silhouette" viewBox="0 0 100 120" fill="rgba(201,168,76,0.3)">
+                <circle cx="50" cy="30" r="22"/>
+                <ellipse cx="50" cy="90" rx="38" ry="30"/>
+              </svg>
+            </div>
+            <div class="person-photo-overlay"></div>
+          </div>
+          <div class="person-info">
+            <div class="person-title">Managing Director</div>
+            <div class="person-name">James Whitfield</div>
+            <div class="person-regions">UAE · Saudi Arabia · Qatar</div>
+            <a href="#" class="person-connect">Connect →</a>
+          </div>
+        </div>
+        <!-- Person 2 -->
+        <div class="person-card">
+          <div class="person-photo">
+            <div class="person-photo-bg">
+              <svg class="person-silhouette" viewBox="0 0 100 120" fill="rgba(201,168,76,0.25)">
+                <circle cx="50" cy="30" r="22"/>
+                <ellipse cx="50" cy="90" rx="38" ry="30"/>
+              </svg>
+            </div>
+            <div class="person-photo-overlay"></div>
+          </div>
+          <div class="person-info">
+            <div class="person-title">Managing Director</div>
+            <div class="person-name">Layla Al-Rashid</div>
+            <div class="person-regions">UAE · Kuwait · Bahrain</div>
+            <a href="#" class="person-connect">Connect →</a>
+          </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person-card">
+          <div class="person-photo">
+            <div class="person-photo-bg">
+              <svg class="person-silhouette" viewBox="0 0 100 120" fill="rgba(201,168,76,0.2)">
+                <circle cx="50" cy="30" r="22"/>
+                <ellipse cx="50" cy="90" rx="38" ry="30"/>
+              </svg>
+            </div>
+            <div class="person-photo-overlay"></div>
+          </div>
+          <div class="person-info">
+            <div class="person-title">Senior Director</div>
+            <div class="person-name">Alexander Novak</div>
+            <div class="person-regions">UAE · Turkey · Egypt</div>
+            <a href="#" class="person-connect">Connect →</a>
+          </div>
+        </div>
+        <!-- Person 4 -->
+        <div class="person-card">
+          <div class="person-photo">
+            <div class="person-photo-bg">
+              <svg class="person-silhouette" viewBox="0 0 100 120" fill="rgba(201,168,76,0.3)">
+                <circle cx="50" cy="30" r="22"/>
+                <ellipse cx="50" cy="90" rx="38" ry="30"/>
+              </svg>
+            </div>
+            <div class="person-photo-overlay"></div>
+          </div>
+          <div class="person-info">
+            <div class="person-title">Managing Director</div>
+            <div class="person-name">Faisal Al-Mukhtar</div>
+            <div class="person-regions">UAE · Saudi Arabia</div>
+            <a href="#" class="person-connect">Connect →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section id="locations">
+    <div class="container">
+      <p class="section-label">Our Offices</p>
+      <h2 class="section-title">Serving Businesses Across the UAE</h2>
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-city">Dubai</div>
+          <div class="location-district">Dubai International Financial Centre</div>
+          <div class="location-divider"></div>
+          <div class="location-address">
+            Office 2201, Floor 22<br />
+            Index Tower, DIFC<br />
+            P.O. Box 506729<br />
+            Dubai, United Arab Emirates
+          </div>
+          <div class="location-contact">
+            <div><span>Tel</span><a href="tel:+97145671000">+971 4 567 1000</a></div>
+            <div><span>Fax</span><a href="tel:+97145671001">+971 4 567 1001</a></div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="location-map">View on Map →</a>
+        </div>
+        <div class="location-card">
+          <div class="location-city">Abu Dhabi</div>
+          <div class="location-district">ADGM — Al Maryah Island</div>
+          <div class="location-divider"></div>
+          <div class="location-address">
+            Office 1305, Floor 13<br />
+            Al Maryah Tower, ADGM Square<br />
+            P.O. Box 764730<br />
+            Abu Dhabi, United Arab Emirates
+          </div>
+          <div class="location-contact">
+            <div><span>Tel</span><a href="tel:+97156402">+971 56 402 4102</a></div>
+            <div><span>Fax</span><a href="tel:+97154581">+971 54 581 7086</a></div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="location-map">View on Map →</a>
+        </div>
+        <div class="location-card">
+          <div class="location-city">Abu Dhabi</div>
+          <div class="location-district">Al Salam Street</div>
+          <div class="location-divider"></div>
+          <div class="location-address">
+            Office 604, 6th Floor<br />
+            Al Ferdous Tower<br />
+            Ad Durri Street<br />
+            Abu Dhabi, United Arab Emirates
+          </div>
+          <div class="location-contact">
+            <div><span>Tel</span><a href="tel:+97124445000">+971 2 444 5000</a></div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="location-map">View on Map →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">Meridian<span>&</span>Co</a>
+          <p>Delivering performance improvement, turnaround management, and business advisory services to organizations seeking to transform operations and accelerate results through decisive action.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Expertise</h4>
+          <ul>
+            <li><a href="#">Performance Improvement</a></li>
+            <li><a href="#">Restructuring</a></li>
+            <li><a href="#">Transaction Advisory</a></li>
+            <li><a href="#">Tax Advisory</a></li>
+            <li><a href="#">Investigations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#people">Our People</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Alumni</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Subscribe to Bulletin</a></li>
+            <li><a href="#locations">Contact UAE Office</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Meridian &amp; Co Advisory. All Rights Reserved.</span>
+        <div>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Anchor nav active state on scroll
+    const sections = ['overview','services','insights','people','locations'];
+    const anchors = document.querySelectorAll('.anchor-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anchors.forEach(a => a.classList.remove('active'));
+          const id = entry.target.id;
+          const active = document.querySelector(`.anchor-nav a[href="#${id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // Scroll-triggered fade-in for cards
+    const fadeEls = document.querySelectorAll('.service-card, .insight-card, .person-card, .location-card, .stat-card');
+    const fadeObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '0';
+          entry.target.style.transform = 'translateY(20px)';
+          entry.target.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, 60);
+          fadeObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => {
+      el.style.opacity = '0';
+      fadeObs.observe(el);
+    });
+  </script>
+</body>
+</html>
